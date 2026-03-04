@@ -1,0 +1,7 @@
+4. Explain how try-catch works and why it is important in async operations. (0.5 Grade) 
+
+=> try-catch is used to handle errors and exceptions that occur when an error occurs during execution "runtime error". 
+
+=> It is used to handle errors that might occur in an asynchronous function that uses the await keyword. This is because the await keyword causes the function to pause and wait for the asynchronous operation to complete, and any errors that occur during the asynchronous operation can be caught in a try-catch block just like any other synchronous code. 
+
+=> try-catch block has two parts the try block that contains the code that might cause error during the runtime and the other part is catch block that occurs when an error caught while running the code in the try block

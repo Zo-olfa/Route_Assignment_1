@@ -1,0 +1,5 @@
+3. What are the main differences between == and ===? (0.5 Grade) 
+
+=> The difference between them is how each one of them compare sides, the "==" compares only the values regardless of their type, while "===" compares both the values and the types.
+
+=>for an example, this will work (5 == "5") because the values are the same but this (5 === "5") will not work as the values are the same but the types are different.
