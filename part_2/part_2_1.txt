@@ -1,6 +1,0 @@
-1. What is the difference between forEach and for...of? When would you use each? (0.5 Grade) 
-
-=> The for...of is a type of loop as it can be used to iterate over any iterable object like objects or arrays. also as it is a type of loop we can use "break" and "continue" statements in the body.
-
-=> unlike forEach, it is a method that only works on arrays to iterate over it's values, It takes an argument which is a function to be called for each item. The function cannot contain "break" or "continue" statements in the body of it.
-

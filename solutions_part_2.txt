@@ -1,0 +1,55 @@
+1. What is the difference between forEach and for...of? When would you use each? (0.5 Grade) 
+
+=> The for...of is a type of loop as it can be used to iterate over any iterable object like objects or arrays. also as it is a type of loop we can use "break" and "continue" statements in the body.
+
+=> unlike forEach, it is a method that only works on arrays to iterate over it's values, It takes an argument which is a function to be called for each item. The function cannot contain "break" or "continue" statements in the body of it.
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+2. What is hoisting and what is the Temporal Dead Zone (TDZ)? Explain with examples. (0.5 Grade) 
+
+=> Hoisting is a js behavior that means moving all the declaration to the top of their block code (scope) regardless to where they declared, and from here came the Temporal Dead Zone as it is the zone between declaring the values at the top of the scope and the actual declaration of variables, in this zone the variable considered uninitialized and using it will cause error.
+
+=> for example:
+
+function exampleForTDZ() {
+  if (value % 2 == 0) {  // 2. so this will cause error as the value have not been initialized yet or not accessible
+    console.log("even number");
+  }
+
+  const value = 0;  // 1. as js behavior this will be at the top of the function
+  console.log(value);
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+3. What are the main differences between == and ===? (0.5 Grade) 
+
+=> The difference between them is how each one of them compare sides, the "==" compares only the values regardless of their type, while "===" compares both the values and the types.
+
+=> for an example, this will work (5 == "5") because the values are the same but this (5 === "5") will not work as the values are the same but the types are different.
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+4. Explain how try-catch works and why it is important in async operations. (0.5 Grade) 
+
+=> try-catch is used to handle errors and exceptions that occur when an error occurs during execution "runtime error". 
+
+=> It is used to handle errors that might occur in an asynchronous function that uses the await keyword. This is because the await keyword causes the function to pause and wait for the asynchronous operation to complete, and any errors that occur during the asynchronous operation can be caught in a try-catch block just like any other synchronous code. 
+
+=> try-catch block has two parts the try block that contains the code that might cause error during the runtime and the other part is catch block that occurs when an error caught while running the code in the try block
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+5. What’s the difference between type conversion and coercion? Provide examples of each. (0.5 Grade) 
+
+=> Type conversion means converting types manually whenever you want using built-in functions like "String, Number, Boolean" functions, while type coercion happens automatically by js when needed. For example, when using "==" js converts the type so that it only compares values.
+
+as an example for Conversion:
+=> String(453)     // will be "453"
+=> Number("543")   // will be 543 
+=> Boolean(2)      // will be true
+
+as an example for coercion:
+=> "5" + 5     // will get 55 as it converts them to String
+=> "5" - 5     // will get 0 as it converts them to number
